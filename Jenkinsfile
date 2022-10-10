@@ -22,7 +22,7 @@ stages{
             parallel{
                 stage ("Deploy to Staging"){
                     steps {
-                        deploy adapters: [tomcat7(credentialsId: 'tomcat_credentials', path: '', url: 'http://13.232.157.130:8080/')], contextPath: null, war: '**/*.war'
+                        deploy adapters: [tomcat7(credentialsId: 'tomcat_credentials', path: '', url: 'http://13.232.253.83:8080/')], contextPath: null, war: '**/*.war'
                     }
                 }
             }
