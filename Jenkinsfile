@@ -17,7 +17,21 @@ stages{
                 }
             }
         }
-
+        stage("static code analasis"){
+            steps{
+                script{
+                    withSonarQubeEnv(credentialsId: 'Sonar_credentials')
+                    sh "mvn clean package sonar:sonar"
+                }
+            }
+        }
+        stage("Quality gate status"){
+            steps{
+                script{
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar_credentials'
+                }
+            }
+        }
         stage ('Deployments'){
             parallel{
                 stage ("Deploy to Staging"){
