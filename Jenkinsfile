@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("git checkout"){
             steps{
-                git credentialsId: 'github_credentials', url: 'https://github.com/naresh9919/war-file--tomcat.git'
+                git 'https://github.com/naresh9919/war-file--tomcat.git'
             }
         }
         stage("unit testing"){
