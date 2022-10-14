@@ -4,7 +4,7 @@ pipeline {
         stage('Docker Build and Tag'){
             steps{
                 sh 'docker build –t simpleproject:latest .'
-                sh 'docker tag simpleproject nareshbabu1991/simpleproject:latest'
+                sh 'docker tag simpleproject nareshbabu1991/simpleproject:latest .'
                 sh 'docker tag simpleproject nareshbabu1991/simpleproject:$BUILD_NUMBER'
             }
         }
