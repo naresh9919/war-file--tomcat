@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>SimpleTomcatWebApp</finalName>
+    <finalName>simpletomcatwebApp</finalName>
   </build>
 </project>
