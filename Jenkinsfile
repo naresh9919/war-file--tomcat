@@ -12,7 +12,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build --t javatechie/simpletomcatwebapp .'
+                    sh 'docker build --t nareshbabu1991/simpletomcatwebapp .'
                 }
             }
         }
