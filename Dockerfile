@@ -1,4 +1,4 @@
 FROM openjdk:11.0
 EXPOSE 8080
-ADD target/SimpleTomcatWebApp.war SimpleTomcatWebApp.war
-ENTRYPOINT ["java","-war","/SimpleTomcatWebApp.war"]
+ADD target/simpletomcatwebApp.war simpletomcatwebApp.war
+ENTRYPOINT ["java","-war","/simpletomcatwebApp.war"]
