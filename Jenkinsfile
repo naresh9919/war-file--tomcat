@@ -11,7 +11,7 @@ pipeline {
         }
         stage("static code analasis"){
             steps{
-                withSonarQubeEnv(credentialsId: 'sonarqube-pwd') {
+                withSonarQubeEnv("SonarQube 8.9.9") {
                     sh "mvn sonar:sonar"
 }
             }
