@@ -20,7 +20,7 @@ pipeline {
             steps{
                 script{
                     withCredentials([string(credentialsId: 'dockerhub_credentials', variable: 'dockerhub')]) {
-                    sh 'docker login -u nareshbabu1991 -p ${dockerhub_credentials}'
+                    sh 'docker login --username nareshbabu1991 --password ${dockerhub_credentials}'
 }
                     sh 'docker push nareshbabu1991/simpletomcatwebapp'
                 }
