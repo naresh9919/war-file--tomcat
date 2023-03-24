@@ -19,7 +19,7 @@ pipeline {
         stage("Quality Gate Status"){
             steps {
                 script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonarqube_pwd'
+                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar_pwd'
                 }
             }
         }
