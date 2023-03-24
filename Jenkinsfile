@@ -14,11 +14,6 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage("deploy"){
-            steps {
-                sh 'mvn deploy'
-            }
-        }
         stage("static code analasis"){
             steps {
                 withSonarQubeEnv("SonarQube 8.9.9"){
